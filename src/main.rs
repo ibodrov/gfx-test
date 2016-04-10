@@ -12,7 +12,7 @@ pub type ColorFormat = gfx::format::Rgba8;
 pub type DepthFormat = gfx::format::DepthStencil;
 
 gfx_vertex_struct!(Vertex {
-    pos: [f32; 2] = "a_Pos",
+    pos: [i32; 2] = "a_Pos",
     color: [f32; 4] = "a_Color",
 });
 
@@ -22,15 +22,15 @@ gfx_pipeline!(pipe {
     out: gfx::RenderTarget<ColorFormat> = "Target0",
 });
 
-const TILE_SIZE: f32 = 32.0;
-const TILE_X: f32 = 10.0 * TILE_SIZE;
-const TILE_Y: f32 = 10.0 * TILE_SIZE;
+const TILE_SIZE: i32 = 32;
+const TILE_X: i32 = 10 * TILE_SIZE;
+const TILE_Y: i32 = 10 * TILE_SIZE;
 
 const QUAD: [Vertex; 4] = [
-    Vertex { pos: [ TILE_X + -1.0 * TILE_SIZE, TILE_Y +  1.0 * TILE_SIZE ], color: [1.0, 0.0, 0.0, 1.0] },
-    Vertex { pos: [ TILE_X +  1.0 * TILE_SIZE, TILE_Y +  1.0 * TILE_SIZE ], color: [0.0, 1.0, 0.0, 1.0] },
-    Vertex { pos: [ TILE_X + -1.0 * TILE_SIZE, TILE_Y + -1.0 * TILE_SIZE ], color: [0.0, 0.0, 1.0, 1.0] },
-    Vertex { pos: [ TILE_X +  1.0 * TILE_SIZE, TILE_Y + -1.0 * TILE_SIZE ], color: [1.0, 0.0, 0.0, 1.0] },
+    Vertex { pos: [ TILE_X + -1 * TILE_SIZE, TILE_Y +  1 * TILE_SIZE ], color: [1.0, 0.0, 0.0, 1.0] },
+    Vertex { pos: [ TILE_X +  1 * TILE_SIZE, TILE_Y +  1 * TILE_SIZE ], color: [0.0, 1.0, 0.0, 1.0] },
+    Vertex { pos: [ TILE_X + -1 * TILE_SIZE, TILE_Y + -1 * TILE_SIZE ], color: [0.0, 0.0, 1.0, 1.0] },
+    Vertex { pos: [ TILE_X +  1 * TILE_SIZE, TILE_Y + -1 * TILE_SIZE ], color: [1.0, 0.0, 0.0, 1.0] },
 ];
 
 const CLEAR_COLOR: [f32; 4] = [0.1, 0.2, 0.3, 1.0];

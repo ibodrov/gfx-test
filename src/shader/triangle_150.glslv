@@ -1,6 +1,6 @@
 #version 150 core
 
-in vec2 a_Pos;
+in ivec2 a_Pos;
 in vec4 a_Color;
 
 uniform mat4 u_Transform;
