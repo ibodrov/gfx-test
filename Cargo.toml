@@ -1,0 +1,11 @@
+[package]
+name = "gfx-test"
+version = "0.1.0"
+authors = ["Ivan Bodrov <ibodrov@gmail.com>"]
+
+[dependencies]
+gfx = "*"
+gfx_window_glutin = "*"
+gfx_device_gl = "*"
+glutin = "*"
+cgmath = "*"
