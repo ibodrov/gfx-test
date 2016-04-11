@@ -5,8 +5,5 @@ authors = ["Ivan Bodrov <ibodrov@gmail.com>"]
 
 [dependencies]
 gfx = "*"
-gfx_window_glutin = "*"
-gfx_device_gl = "*"
-glutin = "*"
+gfx_app = "*"
 cgmath = "*"
-time = "*"
